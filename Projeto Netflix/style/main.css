@@ -1,0 +1,107 @@
+/*comentários em css = '/' + '*' + '*' + '/'  */
+:root{  /* variavel em css*/
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elemntos base*/
+body{
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex; /* Alinhar os elementos na tela pelo "Flex Box"*/
+    flex-direction: row; /* por padrão o Flex Box usa esse comando = " flex-direction: row; " */
+    align-items: center; /*Comando para alinhar ao centro*/
+    justify-content: space-between;/*Espaço entre as tags*/
+}
+
+header .logo{
+    margin-left: 5px; /*Desgruda a logo do canto da caixa,trazendo mais para o meio da tela*/
+    color: var(--vermelho);
+    font-family: 'Arial Black', times; /* Fonte da logo "Netflix"*/
+    font-size: 40px;/* Tamanho por pixels da logo supracitada*/
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /* Evento quando o mouse passa por cima das tags 'a'*/
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 18px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-vikings.jpg');/*melhora o contraste emtre a imagem e o texto*/
+
+    height: 600px;/*tamanho da caixa da imagem de fundo*/
+    background-size: cover;/*entrar na cobertura da caixa*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 5px;/*Espaço entre os botões e o texto*/
+}
+
+.filme-principal .titulo{
+    margin-top:10%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color:rgba(0, 0, 0,.50); /*cor transparecida preta*/
+    border: none; /*retira as bordas*/
+    color: white;/*cor do texto dentro do botão*/
+
+    padding: 15px 30px;/*tamanho do botão */
+    margin-right: 2px; /*espaço entre os botões*/
+    font-size: 12px; /*tamanho da fonte do texto(botão)*/
+    
+    cursor: pointer;
+    transition: .3s ease all ; /*ele cuida da da parte da transição entre uma animação ou outra */
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{ 
+    margin-right: 10px; /*espaço,margem entre o icone e o texto dentro do botão*/
+ 
+}
+
+.container{
+    margin-left: 30px; /*aumentar o espaço,margem entre o conteudo e o começo da tela*/
+    
+}
+
+.filme-principal .container{
+    width: 60%; /* para a sipnose não ultrapassar a tela*/
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
